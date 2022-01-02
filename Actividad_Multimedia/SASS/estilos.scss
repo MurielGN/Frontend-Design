@@ -1,0 +1,200 @@
+@import "./imports/_nav.scss";
+@import "./imports/_header.scss";
+@import "./imports/_footer.scss";
+@import "./imports/_colores.scss";
+
+@font-face{
+  font-family: 'Lato';
+  //font-size: medium;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+//la foto que difige a la parte canvas del documento bibra para llamar la atención del usuario
+//tanto al cargar la pagina con un seg de retardo
+.main{
+  display: grid;
+  grid-template-areas: "animacion" "imagenes" "audio" "video" "canvas";
+
+  .animacion{
+    grid-area: animacion;
+    margin: 5%;
+    padding: 5% 0;
+    background-color: $main-color;
+  }
+  .imagenes{
+    grid-area: imagenes;
+    margin: 5%;
+    padding: 5% 0;
+    background-color: $main-color;
+  }
+  .audio{
+    grid-area: audio;
+    margin: 5%;
+    padding: 5% 0;
+    background-color: $main-color;
+  }
+  .video{
+    grid-area: video;
+    margin: 5%;
+    padding: 5% 0;
+    background-color: $main-color;
+  }
+  .canvasDiv{
+    grid-area: canvas;
+    margin: 5%;
+    padding: 5% 0;
+    background-color: $main-color;
+  }
+}
+.licencia{
+  font-size: 0.5rem;
+}
+img{
+  border: $mainContra1-color 5px solid;
+}
+.ordImg{
+  display: grid;
+  grid-template-areas: "bits" "vectorial";
+
+  .mapaBits{
+    grid-area: bits;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .vectorialDiv{
+    grid-area: vectorial;
+    padding-top: 15%;
+  }
+}
+h2{
+  text-align: center;
+  font-size: 2rem;
+  color: $mainContra-color;
+}
+*{
+  padding: 0%;
+  margin: 0%;
+}
+body{
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: 'Lato';
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#animacion{
+  .vibrator{
+    animation: shakeDelay 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation-delay: 1s;
+    
+    img{
+      //centro la imagen
+      //display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+    }  
+  }
+  //Como al pasar el mouse por encima
+.vibrator:hover{
+  animation: shakeHover 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  // transform: translate3d(0, 0, 0);
+  // backface-visibility: hidden;
+  // perspective: 1000px;
+}
+}
+//Como quiero el mismo efecto para la carga de la página como al poner el raoton encima utilizo un @mixin para los @keyframes
+@mixin vibrar {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes shakeDelay {
+  @include vibrar;
+}
+@keyframes shakeHover {
+  @include vibrar;
+}
+
+//estilos para el zoom del icono vectorial
+//* {box-sizing: border-box;}
+
+.img-zoom-result{
+  float: right;
+  margin-top: 5%;
+  margin-right: 20%;
+}
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+
+//Borde a las imagenes y responsive
+.gallery img{
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  -webkit-box-reflect: below;
+}
+//Estilos de la galeria de imagens que cambian la posicion (html) en los cortes resposive.
+div.gallery {
+  border: 1px solid #ccc;
+}
+div.gallery:hover {
+  border: 1px solid #777;
+}
+/*div.desc {
+  padding: 15px;
+  text-align: center;
+}*/
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+  .gallery img{
+    //elimino el reflejo
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0));
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  .gallery img{
+    //elimino el reflejo
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0));
+  }
+}

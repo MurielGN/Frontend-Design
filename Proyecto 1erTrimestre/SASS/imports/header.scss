@@ -1,0 +1,122 @@
+@import  "_colores";
+.cabecera{
+    display: grid;
+    grid-template-areas: 
+    'foto foto nombre nombre nombre nombre nombre nombre'
+    'foto foto nombre nombre nombre nombre nombre nombre'
+    'foto foto nombre nombre nombre nombre nombre nombre'
+    'foto foto iconos iconos iconos iconos iconos iconos';
+    background-color: $main-color;
+  
+    .foto{ 
+      grid-area: foto; 
+
+      img{
+        border-radius: 15%; 
+        border-color: $traje;
+        border-style: solid;
+        border-width: 5px;
+        margin: 3%;
+      }
+    }
+    .nombre{
+      grid-area: nombre;
+      text-align: center;
+      margin: auto;
+      font-size: 3rem;
+      font-family: Lobster;
+    }
+    .iconosH{
+      grid-area: iconos;
+
+      .listaiconos{
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+          background-color: transparent;
+          height: 60px;
+        }
+        div{
+          margin: auto;
+        }
+      }
+    }
+    h1{
+      color: $traje;
+    }
+  }
+
+  .cabecera .foto{
+    position: relative;
+    display: inline-block;
+  }
+  .cabecera .foto .tooltiptext {
+    visibility: hidden;
+    width: 110px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 75%;
+    left: 70%;
+    margin-left: -70px;
+  }
+  
+  .cabecera .foto:hover .tooltiptext {
+    visibility: visible;
+  }
+  .cabecera .iconosH .listaiconos div img:hover{
+    animation-name: example;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;  
+  }
+  @keyframes example {
+    from {height: 60px;}
+    to {height: 100px;}
+  }
+
+  @media all and (max-width: 768px) {
+    .cabecera .nombre{
+      font-size: 2rem;      
+    }
+  }
+
+  @media all and (max-width: 320px){
+    .cabecera{
+      grid-template-areas: 
+      'nombre iconos'
+      'foto iconos';
+      .foto{
+        img{
+          height: 250px;
+          padding: 0%;
+          margin: 8%;
+        }
+      }
+      .nombre{
+        font-size: 1.6rem;
+        margin: 0%;
+      }
+      .iconosH .listaiconos{
+        div:nth-child(4){
+          display: none;
+        }
+        div:nth-child(9){
+          display: none;
+        }
+        div:nth-child(5){
+          display: none;
+        }
+        div:last-child{
+          display: none;
+        }
+      }
+    }
+  }

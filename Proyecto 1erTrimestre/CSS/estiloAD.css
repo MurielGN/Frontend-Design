@@ -1,0 +1,121 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: Poppins;
+  background-color: rgba(77, 0, 10, 0.2);
+}
+
+h2, h3, h4 {
+  font-family: Ubuntu;
+}
+
+h2 {
+  text-align: center;
+}
+
+.cuerpo {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'contenido contenido contenido prototipo';
+}
+
+.cuerpo .contenido {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contenido;
+}
+
+.cuerpo .contenido .partes {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'htmlM' 'gridM' 'sassM' 'investigacion';
+  grid-row-gap: 20px;
+  background-color: rgba(51, 0, 7, 0.9);
+  padding: 10px;
+  height: 100%;
+  color: #071a6e;
+  font-size: 1.2rem;
+}
+
+.cuerpo .contenido .partes .htmlM {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: htmlM;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cuerpo .contenido .partes .gridM {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: gridM;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cuerpo .contenido .partes .sassM {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: sassM;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cuerpo .contenido .partes .investigacion {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: investigacion;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cuerpo .prototipo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: prototipo;
+}
+
+.cuerpo .prototipo .capturas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  background-color: rgba(51, 0, 7, 0.9);
+  padding: 10px;
+  grid-row-gap: 20px;
+}
+
+.cuerpo .prototipo .capturas .captura {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.cuerpo .prototipo .capturas .captura img {
+  max-width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .cuerpo {
+        grid-template-areas: 'contenido contenido prototipo';
+  }
+}
+
+@media all and (max-width: 320px) {
+  .cuerpo {
+        grid-template-areas: 'contenido' 'prototipo';
+  }
+  .cuerpo .contenido .partes {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=estiloAD.css.map */

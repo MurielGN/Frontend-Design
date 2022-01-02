@@ -1,0 +1,55 @@
+footer {
+  clear: both;
+  text-align: center;
+  background-color: #2e1f21;
+  color: #cfd7fc;
+  font-family: 'DancingScript';
+  font-size: 1rem;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'dato dato dato dato dato dato dato sello';
+}
+
+footer address {
+  font-size: 1.5rem;
+}
+
+footer .datos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: dato;
+  padding-left: 20%;
+}
+
+footer .sello {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: sello;
+  margin: auto;
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  font-weight: 400;
+  src: url(../../fonts/DancingScript-Regular.ttf);
+}
+
+@media all and (max-width: 320px) {
+  footer {
+    font-size: 0.7rem;
+    margin-top: 10px;
+        grid-template-areas: 'dato';
+  }
+  footer address {
+    font-size: 0.9rem;
+  }
+  footer .datos {
+    padding-left: 0%;
+  }
+  .sello {
+    display: none;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

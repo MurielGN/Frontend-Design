@@ -1,0 +1,233 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: Poppins;
+  background-color: rgba(77, 0, 10, 0.2);
+}
+
+h2, h3, h4 {
+  font-family: Ubuntu;
+  padding-top: 2%;
+}
+
+.padre {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 20px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  background-color: rgba(51, 0, 7, 0.9);
+  padding: 10px;
+  height: 100%;
+  color: #071a6e;
+  font-size: 1.2rem;
+  margin-top: 2%;
+}
+
+.padre .awsExplicacion .hijo {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.padre .awsExplicacion .hijo .caja {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'foto texto texto texto texto texto' 'caja1 caja1 caja2 caja2 caja3 caja3' 'caja1 caja1 caja2 caja2 caja3 caja3';
+}
+
+.padre .awsExplicacion .hijo .caja .cajaF {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: foto;
+  padding-top: 40%;
+  margin-left: 3%;
+}
+
+.padre .awsExplicacion .hijo .caja .cajaT {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: texto;
+}
+
+.padre .awsExplicacion .hijo .caja .caja1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: caja1;
+}
+
+.padre .awsExplicacion .hijo .caja .caja2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: caja2;
+}
+
+.padre .awsExplicacion .hijo .caja .caja3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: caja3;
+}
+
+.padre .awsExplicacion .hijo .caja img {
+  height: 150px;
+}
+
+.padre .javasExplicacion .hijo {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.padre .javasExplicacion .hijo .caja {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'foto texto texto texto texto texto' 'caja1 caja1 caja2 caja2 caja3 caja3' 'caja1 caja1 caja2 caja2 caja3 caja3';
+}
+
+.padre .javasExplicacion .hijo .caja .cajaF {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: foto;
+  padding-top: 40%;
+  margin-left: 3%;
+}
+
+.padre .javasExplicacion .hijo .caja .cajaT {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: texto;
+}
+
+.padre .javasExplicacion .hijo .caja .caja1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: caja1;
+}
+
+.padre .javasExplicacion .hijo .caja .caja2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: caja2;
+}
+
+.padre .javasExplicacion .hijo .caja .caja3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: caja3;
+}
+
+.padre .javasExplicacion .hijo .caja img {
+  height: 150px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.cajaT p {
+  padding-left: 3%;
+}
+
+.cajaT h4 {
+  padding-left: 3%;
+}
+
+.caja1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.caja2 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caja3 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .caja2 {
+    display: none;
+  }
+  .padre .awsExplicacion .hijo .caja {
+        grid-template-areas: 'foto texto texto texto' 'caja1 texto texto texto' 'caja3 texto texto texto';
+  }
+  .padre .awsExplicacion .hijo .caja .cajaF {
+    padding: 15%;
+  }
+  .padre .awsExplicacion .hijo .caja .cajaT h3 {
+    padding-right: 36%;
+  }
+  .padre .awsExplicacion .hijo .caja .caja1 img {
+    width: 85%;
+  }
+  .padre .javasExplicacion .hijo .caja {
+        grid-template-areas: 'foto texto texto texto' 'caja1 texto texto texto' 'caja3 texto texto texto';
+  }
+  .padre .javasExplicacion .cajaT h3 {
+    padding-right: 36%;
+  }
+}
+
+@media all and (max-width: 320px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .caja3 {
+    display: none;
+  }
+  .padre {
+    font-size: 0.8rem;
+  }
+  .padre .awsExplicacion .hijo .caja {
+        grid-template-areas: 'foto' 'texto' 'caja1';
+  }
+  .padre .awsExplicacion .hijo .caja .cajaF {
+    padding: 5%;
+    padding-left: 15%;
+  }
+  .padre .awsExplicacion .hijo .caja .cajaT h3 {
+    padding-right: 0%;
+  }
+  .padre .awsExplicacion .hijo .caja .caja1 img {
+    width: 100%;
+  }
+  .padre .javasExplicacion .hijo .caja {
+        grid-template-areas: 'foto' 'texto' 'caja1';
+  }
+  .padre .javasExplicacion .hijo .caja .cajaF {
+    padding-left: 10%;
+    padding-top: 5%;
+  }
+  .padre .javasExplicacion .cajaT h3 {
+    padding-right: 0%;
+  }
+}
+/*# sourceMappingURL=estiloMD.css.map */

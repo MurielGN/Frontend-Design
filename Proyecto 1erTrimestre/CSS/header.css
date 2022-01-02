@@ -1,0 +1,149 @@
+.cabecera {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'foto foto nombre nombre nombre nombre nombre nombre' 'foto foto nombre nombre nombre nombre nombre nombre' 'foto foto nombre nombre nombre nombre nombre nombre' 'foto foto iconos iconos iconos iconos iconos iconos';
+  background-color: #2e1f21;
+}
+
+.cabecera .foto {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: foto;
+}
+
+.cabecera .foto img {
+  border-radius: 15%;
+  border-color: #cfd7fc;
+  border-style: solid;
+  border-width: 5px;
+  margin: 3%;
+}
+
+.cabecera .nombre {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: nombre;
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  font-family: Lobster;
+}
+
+.cabecera .iconosH {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: iconos;
+}
+
+.cabecera .iconosH .listaiconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cabecera .iconosH .listaiconos img {
+  background-color: transparent;
+  height: 60px;
+}
+
+.cabecera .iconosH .listaiconos div {
+  margin: auto;
+}
+
+.cabecera h1 {
+  color: #cfd7fc;
+}
+
+.cabecera .foto {
+  position: relative;
+  display: inline-block;
+}
+
+.cabecera .foto .tooltiptext {
+  visibility: hidden;
+  width: 110px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 75%;
+  left: 70%;
+  margin-left: -70px;
+}
+
+.cabecera .foto:hover .tooltiptext {
+  visibility: visible;
+}
+
+.cabecera .iconosH .listaiconos div img:hover {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes example {
+  from {
+    height: 60px;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+@keyframes example {
+  from {
+    height: 60px;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .cabecera .nombre {
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .cabecera {
+        grid-template-areas: 'nombre iconos' 'foto iconos';
+  }
+  .cabecera .foto img {
+    height: 250px;
+    padding: 0%;
+    margin: 8%;
+  }
+  .cabecera .nombre {
+    font-size: 1.6rem;
+    margin: 0%;
+  }
+  .cabecera .iconosH .listaiconos div:nth-child(4) {
+    display: none;
+  }
+  .cabecera .iconosH .listaiconos div:nth-child(9) {
+    display: none;
+  }
+  .cabecera .iconosH .listaiconos div:nth-child(5) {
+    display: none;
+  }
+  .cabecera .iconosH .listaiconos div:last-child {
+    display: none;
+  }
+}
+/*# sourceMappingURL=header.css.map */

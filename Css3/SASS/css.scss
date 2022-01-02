@@ -1,0 +1,83 @@
+section{
+    padding: 5%;
+    h3{
+        text-align: center;
+        background-color: #269926;
+        font-size: 1.75rem;
+        color: white;
+    }
+}
+
+s{
+    color: red;
+    font-size: 0.75rem;
+}
+.lorem{
+    border: 3px solid green;
+}
+#iris{
+    height: 55px;
+    background-color: red;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+a[target=_blank] {
+    background-color: orange;
+}
+a[href|=https]{
+    background-color: yellow;
+}
+//con :target cambiar tamaño y color del titutlo de la propia seccion
+#psclases{
+    #pclases:target {
+        font-size: 150%;
+        background-color: orangered;
+    }
+    p:lang(es) {
+        color: #FF0000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    p:lang(fr) {
+        color: #BF3030;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p:lang(it) { 
+        color: #A60000;
+        font-family: sans-serif;
+      }
+    li:first-child{
+        color: #FF0000;
+    }
+    li:nth-child(2){
+        color: #BF3030;
+    }
+    li:nth-child(3){
+        color: #A60000;
+    }
+    li:nth-child(4){
+        color: #FF0000;
+    }
+    li:nth-child(5){
+        color: #BF3030;
+    }
+    li:nth-child(6){
+        color: #A60000;
+    }
+    li:last-child{
+        color: #FF0000;
+    }
+}
+#pelementos{
+    p:first-letter{
+        color: #A60000;
+        font-size: 120%;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    p:first-line{
+        font-family: italic;
+    }
+    p:after{
+        content:'.';
+    }
+
+}
+

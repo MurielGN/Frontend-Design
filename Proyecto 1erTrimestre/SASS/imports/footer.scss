@@ -1,0 +1,46 @@
+@import  "_colores";
+footer{
+    clear: both;
+    text-align: center;
+    background-color: $main-color;
+    color: $traje;
+    font-family: 'DancingScript';
+    font-size: 1rem;
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas: 'dato dato dato dato dato dato dato sello';
+  
+    address{
+      font-size: 1.5rem;
+    }
+    .datos{
+      grid-area: dato;
+      padding-left: 20%;
+    }
+    .sello{
+      grid-area: sello;
+      margin: auto;
+    }
+  }
+  @font-face{
+    font-family: 'DancingScript';
+    font-weight: 400;
+    src: url(../../fonts/DancingScript-Regular.ttf);
+  }
+
+  @media all and (max-width: 320px){
+    footer{
+      font-size: 0.7rem;
+      margin-top: 10px;
+      grid-template-areas: 'dato';
+      address{
+        font-size: 0.9rem;
+      }
+      .datos{
+        padding-left: 0%;
+      }
+    }
+    .sello{
+      display: none;
+    }
+  }

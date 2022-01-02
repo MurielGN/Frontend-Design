@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="./CSS/font.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/estiloAD.css">
+
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <div class="foto">
+                <img src="./imagenes/fotoCabeceza.PNG" alt="Muriel"><span class="tooltiptext">¡Socio Perfecto!</span>                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique velit excepturi ea quod suscipit nostrum, et ratione eligendi alias esse distinctio id labore at itaque! Enim natus deserunt unde possimus.</p> -->
+            </div>
+            <div class="nombre">
+                <h1>Muriel González-Nicolás</h1>
+            </div>
+            <div class="iconosH">
+                <div class="listaiconos">
+                   <div><img src="./imagenes/iconos/AWS.png" alt="AWS"></div>
+                    <div><img src="./imagenes/iconos/Java.png" alt="Java"></div>
+                    <div><img src="./imagenes/iconos/PHP.png" alt="PHP"></div>
+                    <div><img src="./imagenes/iconos/HTML.png" alt="HTML"></div>
+                    <div><img src="./imagenes/iconos/XML.png" alt="XML"></div>
+                    <div><img src="./imagenes/iconos/JAVA_SCRIPT.png" alt="JavaScript"></div>
+                    <div><img src="./imagenes/iconos/MYSQL.png" alt="MySQL"></div>
+                    <div><img src="./imagenes/iconos/PHYTON.png" alt="Python"></div>
+                    <div><img src="./imagenes/iconos/CSS.png" alt="CSS"></div>
+                    <div><img src="./imagenes/iconos/SASS.png" alt="SASS"></div>
+                    <div><img src="./imagenes/iconos/JSON.png" alt="Json"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">Inicio</a>
+            <a href="./index.html">Sobre mi</a>
+            <a href="./misdesarrollos.html">Formación</a>
+            <a href="./index.html">Mis intereses</a>
+            <a href="./acercaDe.html">Acerca de</a>
+            <a href="./recursos/CVMuriel.pdf">CV</a>
+<!--             <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Las leyes de la gestalt
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#ley1">Proximidad</a>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <div class="contenido">
+            <main>
+                <article class="explicacion">
+                    <div class="partes">
+                        <section class="htmlS">
+                            <div class="htmlM">
+                                <h2>HTML</h2><br>
+                                <h4>Uso modular de css externos</h4>
+                                <p>He utilizado la referencia a css externos múltiple para poder reutilizar el código.</p>
+                                <br><h4>Uso de hsla</h4>
+                                <p>Juego con los hsla para dar color rojo como principal y azul como el traje para detalles. No uso colores complementarios si no que juego con la saturación luminosidad y transparencia.</p>
+                            </div>
+                        </section>
+                        <section class="gridS">
+                            <div class="gridM">
+                                <h2>Grid</h2><br>
+                                <h4>Uso anidado de grids</h4>
+                                <p>He usado el display grid de forma anidada con el objetivo de hacer más sencilla la maquetación. He usado grids genéricos para colocar un main y un aside. Luego dentro de he vuelto a usar otro grid para ordenar los elementos más pequeños de su interior. Así sucesivamente.</p>
+                                <br><h4>Anidando con FlexBox</h4>
+                                <p>En algunos aspectos de la página como los iconos del head, he utilizado un FlexBox dentro de un grid. De esta forma he puedo hacer los iconos algo responsive acumulando en columnas si es necesario.</p>
+                            </div>
+                        </section>
+                        <section class="sassS">
+                            <div class="sassM">
+                                <h2>SASS</h2><br>
+                                <h4>Uso de @mixin</h4>
+                                <p>Por la propia estructura de página de formación, he utilizado dos @mixin con sus @include. Con esto he ahorrado repetir muchas líneas de código, además de conseguir un código más limpio</p>
+                                <br><h4>Uso variables e @imports</h4>
+                                <p>Utilizo variables para los colores y imports al inicio de cada .scss para tener los colores disponibles</p>
+                                <br><h4>Uso de anidación y especificidad</h4>
+                                <p>Utilizo la facilidad de anidación de SASS para simplificar mi .scss y asegurar la especificidad.</p>
+                            </div>
+                        </section>
+                        <section class="investigacionS">
+                            <div class="investigacion">
+                                <h2>Investigación</h2><br>
+                                <h4>Iconos con fondo transparente</h4>
+                                <p>Para poder tener en el head iconos con fondo transparente he necesitado dos investigaciones. La primera hay que dejar el fondo vacío con photoshop. Aun con esto el navegador deja el fondo de la imagen en blanco por defecto lo que se arregla con la propiedad background-color: transparent</p>
+                                <br><h4>Aumentar espacio entre elementos de una lista</h4>
+                                <p>Por motivos estéticos de la página principal necesitaba aumentar el espacio entre elementos de una lista. Se puede conseguir con la propiedad de las listas line-height</p>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <div class="prototipo">
+            <aside>
+                <div class="capturas">
+                    <div class="captura"><img src="./imagenes/proto1v2.png" alt="prototipo1"></div>
+                    <div class="captura"><img src="./imagenes/proto2v2.png" alt="prototipo1"></div>
+                    <div class="captura"><img src="./imagenes/prototipo3v2.png" alt="prototipo1"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <footer>
+        <div class="datos">
+          <address>
+            Muriel González Nicolás 
+            <br/>
+            correo: muriel.gonzaleznicolas@educa.madrid.org
+            <br/>
+          </address> 
+          &reg; Reservados todos los derechos. &reg;
+        </div>    
+        <div class="sello">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

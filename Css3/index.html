@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad CSS y CSS3</title>
+    <link rel="stylesheet" href="./CSS/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Actividad CSS y CSS3</h1>
+  </header>
+    <nav>
+        <div class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="./css.html">CSS</a>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="myFunction()">CSS3
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#RoundedCorners">Rounded Corners</a>
+                <a href="#BorderImages">Border Images</a>
+                <a href="#Backgrounds">Backgrounds</a>
+                <a href="#Gradients">Gradients</a>
+                <a href="#Shadows">Shadows</a>
+                <a href="#TextEffect">Text Effects</a>
+                <a href="#D2Transforms">2D Transforms</a>
+                <a href="#D3Transforms">3D Transforms</a>
+                <a href="#Transitions">Transitions</a>
+                <a href="#Animations">Animations</a>
+                <a href="#Tooltips">Tooltips</a>
+                <a href="#Buttons">Buttons</a>
+                <a href="#Pagination">Pagination</a>
+                <a href="#MultipleColumns">Multiple Columns</a>
+                <a href="#UserInterface">User Interface</a>
+
+              </div>
+            </div>            
+        </div>
+    </nav>
+    <main>
+      <article id="RoundedCorners">
+        <h2>Rounded Corners</h2>
+        <p id="parrafoRC">La propiedad border-radius nos permite definir el radio de las esquinas. </p>
+        <p id="parrafoRCej1">!Tengo las esquinas reondeadas y una foto de fondo!</p>
+        <p id="parrafoRCej2">!Tengo las esquinas reondeadas y un color de fondo!</p>
+      </article>
+      <article id="BorderImages">
+        <h2>Border Images</h2>
+        <p id="parrafoBI">La propiedad border-image nos permite utilizar una foto que se repite popr nuestro borde </p>
+        <p id="parrafoBIej1">!Tengo solo los marcos laterales!</p>
+        <p id="parrafoBIej2">!Estoy al 100%!</p>
+      </article>
+      <article id="Backgrounds">
+        <h2>Backgrounds</h2>
+        <p id="parrafoBG">La propiedad Backgrounds nos perminte diseñar las fotos de fondo</p>
+        <p id="parrafoBGej1">!Tengo un icono conmigo!</p>
+        <p id="parrafoBGej2">!Soy un posit!</p>
+      </article>
+      <article id="Gradients">
+        <h2>Gradients</h2>
+        <p id="parrafoG">La propiedad Gradients te permite controlar el grado de color.</p>
+        <p id="parrafoGej1">!Hoy me siento alegre!</p>
+        <p id="parrafoGej2">!Hay que me quemo!</p>
+      </article>
+      <article id="Shadows">
+        <h2>Shadows</h2>
+        <p id="parrafoS">La propiedad Shadows te permite dar sombras.</p>
+        <p id="parrafoSej1">!Estoy sombreado!</p>
+        <p id="parrafoSej2">!Tambien estoy sombreado!</p>
+      </article> 
+      <article id="TextEffect">
+        <h2>Text Effect</h2>
+        <p id="parrafoTE"><span> La propiedad Text Effect te permite contralar los efectos del texto.</span></p>
+        <p id="parrafoTEej1"><span> ¡Me salgo de mi caja! Y no puedo evitarlooooooooooooooooooooooooooo</span></p>
+        <p id="parrafoTEej2"><span class="arriba">Arriba</span>
+          <br>
+          <span class="izquierda">Iquierda</span>
+          <span class="derecha">Derecha</span>
+          <br><br><br>
+          <span id="abajo">Abajo</span>
+        </p>
+      </article>
+      <article id="D2Transforms">
+        <h2>2D Transforms</h2>
+        <p id="parrafo2T">La propiedad 2D Transforms te permite jugar con las dos mimensiones para dar formatos nuevos.</p>
+        <p id="parrafo2Tej1">!Abran paso que voy cojo!</p>
+        <p id="parrafo2Tej2">!Me siento másgrande!</p>
+      </article>  
+      <article id="D3Transforms">
+        <h2>3D Transforms</h2>
+        <p id="parrafo3T">La propiedad 3D Transforms te permite girar elementos en los ejes X, Y y Z.</p>
+        <p id="parrafo3Tej1">!No me digas que lo tengo justo detrás!</p>
+        <p id="parrafo3Tej2">!Ay madre, que estoy boca abajo del todo!</p>
+      </article>  
+      <article id="Transitions">
+        <h2>Transitions</h2>
+        <p id="parrafoTr">La propiedad Transitions te permite hacer transiciones suaves de propiedades.</p>
+        <p id="parrafoTrej1">!Yo es que voy un segundo más lento!</p>
+        <p id="parrafoTrej2">!No me mires que me mareo!</p>
+      </article>
+      <article id="Animations">
+        <h2>Animations</h2>
+        <p id="parrafoA">La propiedad Animations configuar las animaciones en por sus propiedades.</p>
+        <p id="parrafoAej1">¿Qué color tengo?</p>
+        <div class="movimiento">
+          <p id="parrafoAej2">¿Te gusta mi sombrero?</p>
+        </div>
+      </article> 
+      <article id="Tooltips">
+        <h2>Tooltips</h2>
+        <div class="encima">
+          <p id="parrafoT"> La propiedad Tooltips te permite mostrar carteles cuando se pasa el cursor para mostrar información extra.</p>
+          <span class="sobre_mi">Estás encima de mi</span>
+        </div>
+        <div class="encima1">
+          <p id="parrafoTej1">!A mi me gusta las flechas y abajo!</p>
+          <span class="sobre_mi1">Estás encima de mi</span>
+        </div>
+        <div class="encima2">
+          <p id="parrafoTej2">!A mi me cuesta más!</p>
+          <span class="sobre_mi2">Estás encima de mi</span>
+        </div>
+      </article>
+      <article id="Buttons">
+        <h2>Buttons</h2>
+        <p id="parrafoB">La propiedad Buttons te permite insertar botones y estableces sus propiedades.<button class="button button3">Soy un botón</button></p>
+        <p id="parrafoBej1">!Mi boton se pone a la sombra!<button class="button button2">Sombrita, que bien</button></p>
+        <p id="parrafoBej2">!No me funciona el botón!<button class="button disabled">¡No quiero!</button></p>
+      </article>
+      <article id="Pagination">
+        <h2>Pagination</h2>
+        <div class="pagination">
+          <p id="parrafoP">La propiedad Pagination te permite crear una paginación si tu web tienes muchas páginas.</p>
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">&raquo;</a>
+        </div>
+        <div class="pagination1">
+          <p id="parrafoPej1">!Mejor con trasiciones!</p>
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">&raquo;</a>
+        </div>
+        <div>
+          <p id="parrafoPej2">!Le sirvo el típoco menú!</p>
+          <ul class="breadcrumb">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./css.html">CSS</a></li>
+            <li><a href="./index.html">CSS 3</a></li>
+          </ul>
+        </div>
+      </article>
+      <article id="MultipleColumns">
+        <h2>Multiple columns</h2>
+        <p>La propiedad Multiple columns te permite organizar el texto el columnas.</p>
+        <div class="mc">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+        </div>
+      </article>
+      <article id="UserInterface">
+        <h2>User Interface</h2>
+        <div class="ui">
+          <p id="parrafoUI">La propiedad User Interface te permite dejar que el usuario modifique el tamaño de elementos.</p>
+        </div>
+        <div class="ui1">
+          <p id="parrafoUIej1">!Voy a lo alto y ancho!</p>
+        </div>
+        <div class="ui2">
+          <p id="parrafoUIej2">!No se pueden tener más marcos!</p>
+        </div>
+      </article>              
+  </main>
+  <footer>
+    <div class="datos">
+      <address>
+        Muriel González Nicolás 
+        <br/>
+        correo: muriel.gonzaleznicolas@educa.madrid.org
+        <br/>
+      </address> 
+      &reg; Reservados todos los derechos. &reg;
+    </div>    
+    <div class="sello">
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" />
+        </a>
+    </div>
+  </footer>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
+    
+</body>
+</html>

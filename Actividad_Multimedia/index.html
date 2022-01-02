@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/estilos.css" />
+    <title>Apuntes Multimedia</title>
+</head>
+<body onload="JavaScript:dibujar();">
+    <header>
+        <h1>Apuntes Multimedia</h1>
+    </header>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()"> Ejemplos Multimedia
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#animacion">Animación</a>
+                    <a href="#imagenes">Imágenes</a>
+                    <a href="#audio">Audio</a>
+                    <a href="#video">Video</a>
+                    <a href="#canvas">Canvas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <main>
+            <div class="animacion">            
+                <section id="animacion">
+                    <h2>Animación sobre una imagen con vibración y enlace</h2><br><br><br>
+                    <p>Esta imagen tiene una animación que dos disparadores:</p><br>
+                    <p>&emsp;Primero tiene un retardo de 1s. Esto se produce tanto después de la carga de la página como cuando se realiza el segundo disparador.</p>
+                    <p>&emsp;El segundo disparador se efectúa cuando se pone el ratón encima de la imagen.</p><br><br>
+                    <p>Además al clicar en la foto nos lleva a la sección de Canvas de esta página.</p>
+                    <!-- hacer boton animdo que lleve a canvas. Bibracón al hover y al seg -->
+                    <div class="vibrator">
+                        <!-- https://wordpress.org/openverse/photos/20020b90-00f0-4c68-9839-ae51964b3a44 -->
+                        <a href="#canvas"><img src="./imagenes/canvas.jpg" alt="Canvas"></a>
+                        <p class="licencia">"Canvas" por sepyle86 está bajo la licencia CC PDM 1.0 </p>
+                    </div>
+                </section>
+            </div>
+            <div class="imagenes">
+                <section id="imagenes">
+                    <div class="ordImg">
+                        <div class="mapaBitsDiv">
+                            <article class="mapaBits">
+                                <h2>Imágenes de mapas de bits</h2><br><br>
+                                <p>Estas tres imágenes son una galería responsive, cambian su posición al reducir el tamaño de la pantalla y tienen un reflejo para pantallas grandes.</p><br><br>
+                                <!-- Creo una galeria responsive -->
+                                <div class="responsive">
+                                    <div class="gallery">
+                                        <!-- Licencia "Sport" por Francois Peeters está bajo la licencia CC BY-ND 2.0   -->
+                                        <!-- https://search.creativecommons.org/photos/e990e265-c8cb-4f29-852b-3c3ac37ca973 -->
+                                        <picture>
+                                            <source media="(min-width:700px)" srcset="./imagenes/bits_deporte.jpg">
+                                            <source media="(min-width:500px)" srcset="./imagenes/bits_cloud.jpg">
+                                            <img src="./imagenes/bits_forest.PNG" alt="Flowers" style="width:auto;">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="responsive">
+                                    <div class="gallery">
+                                        <!-- Licencia "Clouds" por Kiwi Tom está bajo la licencia CC BY 2.0  -->
+                                        <!-- https://search.creativecommons.org/photos/f44ce85c-8910-4955-aa3d-8247eaf65a96 -->
+                                        <picture>
+                                            <source media="(min-width:700px)" srcset="./imagenes/bits_forest.PNG">
+                                            <source media="(min-width:500px)" srcset="./imagenes/bits_deporte.jpg">
+                                            <img src="./imagenes/bits_cloud.jpg" alt="Flowers" style="width:auto;">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="responsive">
+                                    <div class="gallery">
+                                        <!-- Licencia "Forest blue" por Collin Key está bajo la licencia CC BY-NC-SA 2.0    -->
+                                        <!-- https://search.creativecommons.org/photos/c283f7f8-24b6-4949-9119-0b2bf2b87afa -->                                        <picture>
+                                            <source media="(min-width:700px)" srcset="./imagenes/bits_cloud.jpg">
+                                            <source media="(min-width:500px)" srcset="./imagenes/bits_forest.PNG">
+                                            <img src="./imagenes/bits_deporte.jpg" alt="Flowers" style="width:auto;">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="vectorialDiv">
+                            <article class="vectorial">
+                                <br><br><h2>Imagen vectorial</h2><br>
+                                <p>Hay un icono vectorial de señal de Wifi con un cuadro al lado. Si se pasa el puntero por encima del icono wifi vemos un zoom en la caja de la rechea y como no se pierde calidad de imagen.</p><br>
+                                <div class="img-zoom-container">
+                                    <img id="myimage" src="./imagenes/wifi_icon.svg" width="300" height="450" alt="Icono Wifi zoom">
+                                    <div id="myresult" class="img-zoom-result"></div>
+                                </div>
+                            </article>
+                        </div> 
+                    </div>   
+                </section>
+            </div>
+            <div class="audio">
+                <section id="audio">
+                    <h2>Audio</h2><br><br>
+                    <p>Prueba para poner audio en una página web</p><br>
+
+                    <audio controls>
+                        <source src="./audio/cita_Charles_Bukowski.aac" type="audio/mpeg"/>
+                        <!-- Añado una version en mp3 por si algún navegador no pudiera reproducir .aac -->
+                        <source src="./audio/cita_Charles_Bukowski.mp3" type="audio/mpeg"/>
+                        Este navegador no soporta este audio.
+                    </audio>
+                </section>
+            </div>
+            <div class="video">
+                <section id="video">
+                    <h2>Video</h2><br><br>
+                    <p>Prueba para poner video en una página web</p><br>
+                    <video controls width="360" height="auto" poster="./imagenes/caputa_BoliAzul.jpg">
+                        <source src="./video/giroBoli.mp4" type="video/mp4"/>
+                    </video>
+                </section>
+            </div>
+            <div class="canvasDiv">
+                <section class="canvas" id="canvas">
+                    <h2>Canvas</h2><br><br>
+                    <p>En el lienzo canvas se introudce texto y se deibuja la letra M. Además se ha investigado como hacerla cambiar de color cada medio segundo.</p><br>
+                    <canvas id="canvas01" width="400" height="300" style="border:1px solid ">Tu navegador no soporta la etiqueta canvas.</canvas>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="datos">
+            <address>
+              Muriel González Nicolás 
+              <br/>
+              correo: muriel.gonzaleznicolas@educa.madrid.org
+              <br/>
+            </address> 
+            &reg; Reservados todos los derechos. &reg;
+          </div>    
+          <div class="sello">
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px"
+                      src="http://jigsaw.w3.org/css-validator/images/vcss"
+                      alt="¡CSS Válido!" />
+              </a>
+          </div>
+    </footer>
+    
+    <script type="text/JavaScript">
+        //Creo un interalo para camibar el color
+        var nIntervId;
+        var color;
+        function dibujar() {
+            nIntervId = setInterval(dibujar1, 500);      
+        }
+        //Canvas script
+        function dibujar1() {
+            color = "#"+Math.floor(Math.random()*16777215).toString(16);
+            var milienzo = document.getElementById("canvas01");
+            var micontexto = milienzo.getContext("2d");
+            micontexto.textAlign="center";
+            micontexto.font="20px arial";
+            micontexto.fillText("Soy un canvas.",200,25);
+
+            //Voy a dibujar una M
+            micontexto.strokeStyle=color;
+            // |
+            micontexto.moveTo(160,200);
+            micontexto.lineTo(160,100);
+            micontexto.stroke();
+            // |\
+            micontexto.moveTo(160,100);
+            micontexto.lineTo(200,150);
+            micontexto.stroke();
+            // |\/
+            micontexto.moveTo(200,150);
+            micontexto.lineTo(240,100);
+            micontexto.stroke();
+            // |\/|
+            micontexto.moveTo(240,100);
+            micontexto.lineTo(240,200);
+            micontexto.stroke();
+            
+        }
+    </script>
+
+    <script>
+        function imageZoom(imgID, resultID) {
+          var img, lens, result, cx, cy;
+          img = document.getElementById(imgID);
+          result = document.getElementById(resultID);
+          /*create lens:*/
+          lens = document.createElement("DIV");
+          lens.setAttribute("class", "img-zoom-lens");
+          /*insert lens:*/
+          img.parentElement.insertBefore(lens, img);
+          /*calculate the ratio between result DIV and lens:*/
+          cx = result.offsetWidth / lens.offsetWidth;
+          cy = result.offsetHeight / lens.offsetHeight;
+          /*set background properties for the result DIV:*/
+          result.style.backgroundImage = "url('" + img.src + "')";
+          result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+          /*execute a function when someone moves the cursor over the image, or the lens:*/
+          lens.addEventListener("mousemove", moveLens);
+          img.addEventListener("mousemove", moveLens);
+          /*and also for touch screens:*/
+          lens.addEventListener("touchmove", moveLens);
+          img.addEventListener("touchmove", moveLens);
+          function moveLens(e) {
+            var pos, x, y;
+            /*prevent any other actions that may occur when moving over the image:*/
+            e.preventDefault();
+            /*get the cursor's x and y positions:*/
+            pos = getCursorPos(e);
+            /*calculate the position of the lens:*/
+            x = pos.x - (lens.offsetWidth / 2);
+            y = pos.y - (lens.offsetHeight / 2);
+            /*prevent the lens from being positioned outside the image:*/
+            if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+            if (x < 0) {x = 0;}
+            if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+            if (y < 0) {y = 0;}
+            /*set the position of the lens:*/
+            lens.style.left = x + "px";
+            lens.style.top = y + "px";
+            /*display what the lens "sees":*/
+            result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+          }
+          function getCursorPos(e) {
+            var a, x = 0, y = 0;
+            e = e || window.event;
+            /*get the x and y positions of the image:*/
+            a = img.getBoundingClientRect();
+            /*calculate the cursor's x and y coordinates, relative to the image:*/
+            x = e.pageX - a.left;
+            y = e.pageY - a.top;
+            /*consider any page scrolling:*/
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return {x : x, y : y};
+          }
+        }
+        </script>
+        <script>
+            // Initiate zoom effect:
+            imageZoom("myimage", "myresult");
+        </script>
+        <script>
+            //Script del nav
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.reloj{
+    width: 509px;
+    height: auto;
+}
+
+.mapa{
+    width: 512px;
+    height: auto;
+}
+
+body{
+    /* text-align: center; */
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: ReadexPro;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    max-width: 40%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: 'ReadexPro';
+    font-weight: 400;
+    src: url(../fonts/ReadexPro-Regular.ttf);
+  }

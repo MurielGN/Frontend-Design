@@ -1,0 +1,165 @@
+@mixin articleConfig {
+    .hijo{
+        background-color: rgba(255, 255, 255, 0.8);
+
+        .caja{
+            display: grid;
+            grid-template-areas: 
+            'foto texto texto texto texto texto'
+            'caja1 caja1 caja2 caja2 caja3 caja3'
+            'caja1 caja1 caja2 caja2 caja3 caja3';
+
+            .cajaF { grid-area: foto; padding-top: 40%; margin-left: 3%;}
+            .cajaT { grid-area: texto;}
+            .caja1 { grid-area: caja1;}
+            .caja2 { grid-area: caja2;}
+            .caja3 { grid-area: caja3;}
+
+            img{
+                height: 150px;
+            }
+        }
+    }
+}
+@mixin imgCentrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@import  "./imports/_colores";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: Poppins;
+    background-color: $backgroundBody;
+}
+h2, h3, h4{ font-family: Ubuntu; padding-top: 2%;}
+.padre{
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: auto;
+    background-color: $backgroundCajas;
+    padding: 10px;
+    height: 100%;
+    color: $trajeS;
+    font-size: 1.2rem;
+    margin-top: 2%;
+
+
+    .awsExplicacion{
+        @include articleConfig;
+    }
+    .javasExplicacion{
+        @include articleConfig;
+    }
+}
+h3{
+    text-align: center;
+}
+.cajaT p{
+    padding-left: 3%;
+}
+.cajaT h4{
+    padding-left: 3%;
+}
+
+.caja1 img{ @include imgCentrada; padding-top: 2%; padding-bottom: 2%;}
+.caja2 img{ @include imgCentrada;}
+.caja3 img{ @include imgCentrada;}
+
+@media all and (max-width: 768px) {
+    body{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .caja2{
+        display: none;
+    }
+    .padre{
+        .awsExplicacion{
+            .hijo .caja{
+                grid-template-areas: 
+                'foto texto texto texto'
+                'caja1 texto texto texto'
+                'caja3 texto texto texto';
+                .cajaF{
+                    padding: 15%;
+                }
+                .cajaT{
+                    h3{
+                        padding-right: 36%;
+                    }
+                }
+                .caja1{
+                    img{
+                        width: 85%;
+                    }
+                }
+            }
+        }
+        .javasExplicacion{
+            .hijo .caja{
+                grid-template-areas: 
+                    'foto texto texto texto'
+                    'caja1 texto texto texto'
+                    'caja3 texto texto texto';
+            }
+            .cajaT{
+                h3{
+                    padding-right: 36%;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 320px) {
+    body{
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    .caja3{
+        display: none;
+    }
+    .padre{
+        font-size: 0.8rem;
+        .awsExplicacion{
+            .hijo .caja{
+                grid-template-areas: 'foto' 'texto' 'caja1';
+
+                .cajaF{
+                  padding: 5%;
+                  padding-left: 15%;
+              }
+              .cajaT h3{
+                      padding-right: 0%;
+              }
+              .caja1{
+                  img{
+                      width: 100%;
+                  }
+              }
+          }
+       }
+          .javasExplicacion{
+              .hijo .caja{
+                  grid-template-areas: 
+                  'foto'
+                  'texto'
+                  'caja1';
+                  .cajaF{
+                    padding-left: 10%;
+                    padding-top: 5%;
+                }
+              }
+              .cajaT{
+                  h3{
+                      padding-right: 0%;
+                  }
+              }
+          }
+      }
+}
