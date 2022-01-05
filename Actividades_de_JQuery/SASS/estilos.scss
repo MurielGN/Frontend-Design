@@ -65,21 +65,6 @@
   }
 }
 
-.ordImg{
-  display: grid;
-  grid-template-areas: "bits" "vectorial";
-
-  .mapaBits{
-    grid-area: bits;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  .vectorialDiv{
-    grid-area: vectorial;
-    padding-top: 15%;
-  }
-}
 h2{
   text-align: center;
   font-size: 2rem;
@@ -106,75 +91,4 @@ body{
       color: white;
       text-align: center;
     }
-}
-
-//estilos para el zoom del icono vectorial
-//* {box-sizing: border-box;}
-
-.img-zoom-result{
-  float: right;
-  margin-top: 5%;
-  margin-right: 20%;
-}
-.img-zoom-container {
-  position: relative;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  /*set the size of the lens:*/
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  /*set the size of the result div:*/
-  width: 300px;
-  height: 300px;
-}
-
-//Borde a las ej2 y responsive
-.gallery img{
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-  -webkit-box-reflect: below;
-}
-//Estilos de la galeria de imagens que cambian la posicion (html) en los cortes resposive.
-div.gallery {
-  border: 1px solid #ccc;
-}
-div.gallery:hover {
-  border: 1px solid #777;
-}
-/*div.desc {
-  padding: 15px;
-  text-align: center;
-}*/
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-  .gallery img{
-    //elimino el reflejo
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0));
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-  .gallery img{
-    //elimino el reflejo
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0));
-  }
 }

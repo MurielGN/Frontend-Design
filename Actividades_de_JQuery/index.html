@@ -12,7 +12,7 @@
         var aux = 0;
         $(document).ready(function(){            
             //Ejercicio 1
-            $("a").click(function(){
+            $(".aNombre").click(function(){
                 $(".nombre").hide(5000).show(3000).hide(0).show(200).hide(0).show(2000, function(){alert("He tardado 2 segundos en mostrarme");});
             });
             //Ejercicio 2
@@ -85,8 +85,9 @@
                     <a href="#ej1">Ejercicio 1</a>
                     <a href="#ej2">Ejercicio 2</a>
                     <a href="#ej3">Ejercicio 3</a>
-                    <a href="#ej4">Ejercicio 4</a>
                     <a href="#ej5">Ejercicio 5</a>
+                    <a href="#ej6">Ejercicio 6</a>
+                    <a href="#ej7">Ejercicio 7</a>
                 </div>
             </div>
         </div>
@@ -98,7 +99,7 @@
                     <h2>Ejercicio 1</h2><br><br>
                     <p>Utilice jquery para que al pulsar en el enlace se oculte el enlace con una duración de 5 segundos. Inmediatamente después se muestra tardando 3 segundos y finalmente se vuelve a mostrar en 0,2 segundos.</p><br>
                     <p>Luego lo volverá a mostrar tardando 2 segundos y nada más finalizar de mostrarlo se mostrará una alerta en pantalla “He tardado 2 segundos en mostrarme”</p><br>
-                    <a><div class="nombre">Muriel</div></a>
+                    <a class="aNombre"><div class="nombre">Muriel</div></a>
                 </section>
             </div>
             <div class="ej2">            
