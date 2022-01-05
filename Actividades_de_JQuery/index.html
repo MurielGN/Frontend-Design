@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/estilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var aux = 0;
+        $(document).ready(function(){            
+            //Ejercicio 1
+            $("a").click(function(){
+                $(".nombre").hide(5000).show(3000).hide(0).show(200).hide(0).show(2000, function(){alert("He tardado 2 segundos en mostrarme");});
+            });
+            //Ejercicio 2
+            $(".buttonName").mouseenter(function(){
+                $(".buttonName").fadeTo(400,0.3);
+            });
+            $(".buttonName").mouseleave(function(){
+                $(".buttonName").fadeTo(400,1);
+            });
+            //Ejercico 3
+            $(".buttonMove").click(function(){
+                if(aux == 0){
+                    $(".buttonMove").animate({
+                        right: '400px'
+                    },"slow");
+                    aux = 1;
+                }else{
+                    $(".buttonMove").animate({
+                        right: '60%'
+                    },"fast");
+                    aux = 0;
+                }
+            });
+            //Ejercicio 5
+            $("#Mayor").change(function(){
+                if($(this).is(":checked")){
+                    $(".Mayor").hide();
+                    return;
+                }
+                $(".Mayor").show();
+            });
+            $("#Socio").change(function(){
+                if($(this).is(":checked")){
+                    $(".Socio").hide();
+                    return;
+                }
+                $(".Socio").show();
+            });
+            $("#Tarjeta").change(function(){
+                if($(this).is(":checked")){
+                    $(".Tarjeta").hide();
+                    return;
+                }
+                $(".Tarjeta").show();
+            });
+            //Ejercicio 6
+            $("input.note").focus(function(){
+                $(this).css("color", "red");
+            });
+            $("input.note").blur(function(){
+                $(this).css("color", "green");
+            });
+            //Ejercicio 7
+            $("div.selected p").css("background-color", "yellow");
+            });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Actividades de JQuery</h1>
+    </header>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html"><i class="fa fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()"> Ejemplos Multimedia
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#ej1">Ejercicio 1</a>
+                    <a href="#ej2">Ejercicio 2</a>
+                    <a href="#ej3">Ejercicio 3</a>
+                    <a href="#ej4">Ejercicio 4</a>
+                    <a href="#ej5">Ejercicio 5</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <main>
+            <div class="ej1">            
+                <section id="ej1">
+                    <h2>Ejercicio 1</h2><br><br>
+                    <p>Utilice jquery para que al pulsar en el enlace se oculte el enlace con una duración de 5 segundos. Inmediatamente después se muestra tardando 3 segundos y finalmente se vuelve a mostrar en 0,2 segundos.</p><br>
+                    <p>Luego lo volverá a mostrar tardando 2 segundos y nada más finalizar de mostrarlo se mostrará una alerta en pantalla “He tardado 2 segundos en mostrarme”</p><br>
+                    <a><div class="nombre">Muriel</div></a>
+                </section>
+            </div>
+            <div class="ej2">            
+                <section id="ej2">
+                    <h2>Ejercicio 2</h2><br><br>
+                    <p>Cree un botón con su nombre. Al situar el cursor en el mismo se modificará la opacidad a 0,3 en 0,4 segundos. Y al salir se dejará como estaba en 0,4 segundos.</p><br>
+                    <button class="buttonName">Muriel</button>
+                </section>
+            </div>
+            <div class="ej3">            
+                <section id="ej3">
+                    <h2>Ejercicio 3</h2><br><br>
+                    <p>Cree un botón que al pulsarlo la primera vez lo mueva 400px a la izquierda y la siguiente vez lo deje completamente a la izquierda. Si se vuelve a pulsar lo movería a 400px, si lo vuelve a pulsar a la izquierda,… y así sucesivamente. En el primer caso que sea slow y en  el segundo fast.</p><br>
+                    <button class="buttonMove">Move</button>
+                </section>
+            </div>
+            <div class="ej5">            
+                <section id="ej5">
+                    <h2>Ejercicio 5</h2><br><br>
+                    <p>Crea un formulario con 3 chexbox: Mayor de edad, Socio, Tarjeta Regalo.</p>
+                    <p>Además tendrá una tabla con las siguientes filas:</p>
+                    <ol>
+                        <li>Debe ir acompañado de un adulto</li>
+                        <li>No puede traer invitados</li>
+                        <li>Abonará 5% de tasas</li>
+                    </ol>
+                    <p>En caso de pulsar el primer checkbox se esconderá la primera fila. En el caso de pulsar el segundo se esconderá la segunda fila y si se pulsa la tercera se esconderá la tercera fila. En caso contrario se mostrarán las mismas filas.</p><br>
+                    <form>
+                        <input type="checkbox" id="Mayor"><label> Mayor de edad</label><br>
+                        <input type="checkbox" id="Socio"><label> Socio</label><br>
+                        <input type="checkbox" id="Tarjeta"><label> Tarjeta Regalo</label><br>
+                        <table>
+                            <tr class="Mayor"><td>Debe ir acompañado de un adulto</td></tr>
+                            <tr class="Socio"><td>No puede traer invitados</td></tr>
+                            <tr class="Tarjeta"><td>Abonará 5% de tasas</td></tr>
+                        </table>
+                    </form>
+                </section>
+            </div>
+            <div class="ej6">            
+                <section id="ej6">
+                    <h2>Ejercicio 6</h2><br><br>
+                    <p>Crear un formulario que pida las notas de las asignaturas del curso. Al situarse el foco en cada uno de los campos de nota se debe modificar el color del texto a rojo. Cuando no tenga el foco el color del texto debe ser verde.</p><br>
+                    <form>
+                        <label>Diseño: </label><input type="text" class="note"><br>
+                        <label>Cliente: </label><input type="text" class="note"><br>
+                        <label>Servidor: </label><input type="text" class="note"><br>
+                        <label>Empresa: </label><input type="text" class="note"><br>
+                        <label>Inblés: </label><input type="text" class="note"><br>
+                        <label>Despliegue: </label><input type="text" class="note">                        
+                    </form>
+                </section>
+            </div>
+            <div class="ej7">            
+                <section id="ej7">
+                    <h2>Ejercicio 7</h2><br><br>
+                    <p>Crear una página web con elementos div algunos serán de la clase “selected” y otros no. Todos ellos tendrán párrafos dentro. Crear un script para que aquellos párrafos cuyo padre sea de la clase selected aparezcan con el fondo en color amarillo.</p><br>
+                    <br><br>
+                    <div class="selected"><p>Parrrafo 1 selected</p><p>Parrrafo 2 selected</p></div>
+                    <div><p>Parrrafo 1 no selected</p><p>Parrrafo 2 no selected</p></div>
+                    <div class="selected"><p>Parrrafo 3 selected</p><p>Parrrafo 4 selected</p></div>
+                    <div><p>Parrrafo 3 no selected</p><p>Parrrafo 4 no selected</p></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="datos">
+            <address>
+              Muriel González Nicolás 
+              <br/>
+              correo: muriel.gonzaleznicolas@educa.madrid.org
+              <br/>
+            </address> 
+            &reg; Reservados todos los derechos. &reg;
+          </div>    
+          <div class="sello">
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px"
+                      src="http://jigsaw.w3.org/css-validator/images/vcss"
+                      alt="¡CSS Válido!" />
+              </a>
+          </div>
+    </footer>
+    
+        <script>
+            //Script del nav
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
+            }
+        </script>
+</body>
+</html>
